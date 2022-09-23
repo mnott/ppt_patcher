@@ -1,0 +1,19 @@
+--- lib/python3.10/site-packages/pptx/shapes/base.py	2022-09-22 14:36:19.000000000 +0200
++++ patch/lib/site-packages/pptx/shapes/base.py	2022-09-22 14:35:40.000000000 +0200
+@@ -132,6 +132,16 @@
+     def name(self, value):
+         self._element._nvXxPr.cNvPr.name = value
+ 
++
++    @property
++    def alt_text(self):
++        """
++        Alternative text for the shape
++        """
++        return self._element.shape_alt_text
++
++
++
+     @property
+     def part(self):
+         """The package part containing this shape.

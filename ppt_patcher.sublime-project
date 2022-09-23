@@ -1,0 +1,42 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"tab_size": 4,
+		"translate_tabs_to_spaces": false,
+		"python_virtualenv": "$project_path/python/",
+		"python_interpreter": "$project_path/python/bin/python",
+		"project_environment":
+		{
+
+		}
+	},
+	"build_systems":
+	[
+		{
+			"name": "PPT Patcher Python3",
+			"cmd": ["$project_path/python/bin/python", "-i", "-u", "$file"],
+			"file_regex": "^[ ]File \"(...?)\", line ([0-9]*)",
+			"selector": "source.python",
+			"env":
+			{
+				"IDE": "true"
+			}
+		},
+		{
+			"name": "PPT Patcher Bython3",
+			"shell_cmd": "source \"$project_path/python/bin/activate\" && \"$project_path/python/bin/bython\" \"$file\"",
+			"file_regex": "^[ ]File \"(...?)\", line ([0-9]*)",
+			"selector": "source.python",
+			"env":
+			{
+				"IDE": "true"
+			}
+		}
+	]
+}
