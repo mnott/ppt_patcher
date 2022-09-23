@@ -86,7 +86,7 @@ def list_slide_images(prs, aslide=-1):
 		if slides.index(slide) == aslide-1 or aslide == -1:
 			print('slide number ', slides.index(slide)+1)
 			for shape in slide.shapes:
-				if shape.shape_type == 13
+				if shape.shape_type == 13:
 					print('id: %s, height: %s, width: %s, left: %s'%(
 							shape.shape_id,
 							round(shape.height.inches,2),
